@@ -1,5 +1,19 @@
-<h1>Answer</h1>
+{% extends 'base.html' %}
 
-{{name}}
-{{weather}}
-{{ondo}}
+{% block content %}
+<h1>お天気情報</h1>
+<ul class="list-group list-group-flush">
+  <li class="list-group-item">
+    都市：{{name}}
+  </li>
+  <li class="list-group-item">
+    天気：{{weather}}
+  </li>
+  <li class="list-group-item">
+    最高気温：{{temp_max}}度
+  </li>
+  <li class="list-group-item">
+    最低気温：{{temp_min}}度
+  </li>
+</ul>
+{% endblock %}

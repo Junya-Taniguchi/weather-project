@@ -1,7 +1,21 @@
-<h1>THIS IS HOME</h1>
+{% extends 'base.html' %}
+
+{% block content %}
+<p>世界の国のお天気を調べることができるサイトです。このサイトではAPIを使い天気を取得しています。</p>
 
 <form action="{% url 'ask' %}">
-  <textarea cols="40" rows="5" name="fulltext"></textarea>
-  <br />
-  <input type="submit" value="Count!" />
+  <div class="form-group">
+    <label for="exampleFormControlSelect1">天気を調べたい地域を選んでください</label>
+    <select class="form-control" name="city">
+      <option value="Tokyo">Tokyo</option>
+      <option value="Washington">Washington</option>
+      <option value="Beijing">Beijing</option>
+      <option value="Roma">Roma</option>
+      <option value="Paris">Paris</option>
+    </select>
+    <br />
+    <input class="btn btn-primary" type="submit" value="チェック！" />
+  </div>
 </form>
+
+{% endblock %}
